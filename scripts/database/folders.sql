@@ -4,7 +4,7 @@ CREATE TABLE folders (
   name VARCHAR(60) NOT NULL,
   created_at TIMESTAMP default current_timestamp,
   medified_at TIMESTAMP NOT NULL,
-  deleted BOOL NOT NULL DEFAULT false
-  PRIMARY KEY(id)
+  deleted BOOL NOT NULL DEFAULT false,
+  PRIMARY KEY(id),
   CONSTRAINT  fk_folders FOREIGN KEY(parent_id) REFERENCES folders(id)
   )
